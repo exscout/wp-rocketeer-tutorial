@@ -1,0 +1,72 @@
+20150516005835
+20150516024102
+20150516050059
+20150516050250
+20150516050916
+$ git clone "https://github.com/WordPress/WordPress.git" "/srv/www/html/releases/20150516183153" --branch="master" --depth="1"
+git clone "https://github.com/WordPress/WordPress.git" "/srv/www/html/releases/20150516183153" --branch="master" --depth="1"
+Cloning into '/srv/www/html/releases/20150516183153'...
+$ cd /srv/www/html/releases/20150516183153
+$ git submodule update --init --recursive
+cd /srv/www/html/releases/20150516183153
+git submodule update --init --recursive
+
+$ cd /srv/www/html/releases/20150516183153
+$ chmod -R 755 /srv/www/html/releases/20150516183153/app/database/production.sqlite
+$ chmod -R g+s /srv/www/html/releases/20150516183153/app/database/production.sqlite
+$ chown -R www-data:www-data /srv/www/html/releases/20150516183153/app/database/production.sqlite
+cd /srv/www/html/releases/20150516183153
+chmod -R 755 /srv/www/html/releases/20150516183153/app/database/production.sqlite
+chmod -R g+s /srv/www/html/releases/20150516183153/app/database/production.sqlite
+chown -R www-data:www-data /srv/www/html/releases/20150516183153/app/database/production.sqlite
+chmod: cannot access ‘/srv/www/html/releases/20150516183153/app/database/production.sqlite’: No such file or directory
+$ cd /srv/www/html/releases/20150516183153
+$ chmod -R 755 /srv/www/html/releases/20150516183153/storage
+$ chmod -R g+s /srv/www/html/releases/20150516183153/storage
+$ chown -R www-data:www-data /srv/www/html/releases/20150516183153/storage
+cd /srv/www/html/releases/20150516183153
+chmod -R 755 /srv/www/html/releases/20150516183153/storage
+chmod -R g+s /srv/www/html/releases/20150516183153/storage
+chown -R www-data:www-data /srv/www/html/releases/20150516183153/storage
+chmod: cannot access ‘/srv/www/html/releases/20150516183153/storage’: No such file or directory
+$ cd /srv/www/html/releases/20150516183153
+$ chmod -R 755 /srv/www/html/releases/20150516183153/public
+$ chmod -R g+s /srv/www/html/releases/20150516183153/public
+$ chown -R www-data:www-data /srv/www/html/releases/20150516183153/public
+cd /srv/www/html/releases/20150516183153
+chmod -R 755 /srv/www/html/releases/20150516183153/public
+chmod -R g+s /srv/www/html/releases/20150516183153/public
+chown -R www-data:www-data /srv/www/html/releases/20150516183153/public
+chmod: cannot access ‘/srv/www/html/releases/20150516183153/public’: No such file or directory
+$ rm -rf /srv/www/html/releases/20150516183153/wp-content/plugins
+rm -rf /srv/www/html/releases/20150516183153/wp-content/plugins
+
+$ ln -s /srv/www/html/shared/wp-content/plugins /srv/www/html/releases/20150516183153/wp-content/plugins-temp
+$ mv -Tf /srv/www/html/releases/20150516183153/wp-content/plugins-temp /srv/www/html/releases/20150516183153/wp-content/plugins
+ln -s /srv/www/html/shared/wp-content/plugins /srv/www/html/releases/20150516183153/wp-content/plugins-temp
+mv -Tf /srv/www/html/releases/20150516183153/wp-content/plugins-temp /srv/www/html/releases/20150516183153/wp-content/plugins
+
+$ ln -s /srv/www/html/shared/wp-content/uploads /srv/www/html/releases/20150516183153/wp-content/uploads-temp
+$ mv -Tf /srv/www/html/releases/20150516183153/wp-content/uploads-temp /srv/www/html/releases/20150516183153/wp-content/uploads
+ln -s /srv/www/html/shared/wp-content/uploads /srv/www/html/releases/20150516183153/wp-content/uploads-temp
+mv -Tf /srv/www/html/releases/20150516183153/wp-content/uploads-temp /srv/www/html/releases/20150516183153/wp-content/uploads
+
+$ ln -s /srv/www/html/shared/wp-config.php /srv/www/html/releases/20150516183153/wp-config.php-temp
+$ mv -Tf /srv/www/html/releases/20150516183153/wp-config.php-temp /srv/www/html/releases/20150516183153/wp-config.php
+ln -s /srv/www/html/shared/wp-config.php /srv/www/html/releases/20150516183153/wp-config.php-temp
+mv -Tf /srv/www/html/releases/20150516183153/wp-config.php-temp /srv/www/html/releases/20150516183153/wp-config.php
+
+$ ln -s /srv/www/html/releases/20150516183153 /srv/www/html/current-temp
+$ mv -Tf /srv/www/html/current-temp /srv/www/html/current
+ln -s /srv/www/html/releases/20150516183153 /srv/www/html/current-temp
+mv -Tf /srv/www/html/current-temp /srv/www/html/current
+
+$ cd /srv/www/html/releases/20150516183153
+$ sudo /etc/init.d/php5-fpm restart
+cd /srv/www/html/releases/20150516183153
+sudo /etc/init.d/php5-fpm restart
+Restarting php5-fpm (via systemctl): php5-fpm.service.
+$ rm -rf /srv/www/html/releases/20150516005835
+rm -rf /srv/www/html/releases/20150516005835
+
+|=> Removing <info>1 release</info> from the server

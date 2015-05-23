@@ -1,0 +1,57 @@
+20150517100506
+20150517101521
+20150517111908
+20150517152047
+20150517153520
+20150517234521
+$ git clone "https://github.com/WordPress/WordPress.git" "/srv/www/html/releases/20150517235033" --branch="master" --depth="1"
+git clone "https://github.com/WordPress/WordPress.git" "/srv/www/html/releases/20150517235033" --branch="master" --depth="1"
+Cloning into '/srv/www/html/releases/20150517235033'...
+$ cd /srv/www/html/releases/20150517235033
+$ git submodule update --init --recursive
+cd /srv/www/html/releases/20150517235033
+git submodule update --init --recursive
+
+$ ln -s /srv/www/html/shared/composer.json /srv/www/html/releases/20150517235033/composer.json-temp
+$ mv -Tf /srv/www/html/releases/20150517235033/composer.json-temp /srv/www/html/releases/20150517235033/composer.json
+ln -s /srv/www/html/shared/composer.json /srv/www/html/releases/20150517235033/composer.json-temp
+mv -Tf /srv/www/html/releases/20150517235033/composer.json-temp /srv/www/html/releases/20150517235033/composer.json
+
+$ ln -s /srv/www/html/shared/wp-content/uploads /srv/www/html/releases/20150517235033/wp-content/uploads-temp
+$ mv -Tf /srv/www/html/releases/20150517235033/wp-content/uploads-temp /srv/www/html/releases/20150517235033/wp-content/uploads
+ln -s /srv/www/html/shared/wp-content/uploads /srv/www/html/releases/20150517235033/wp-content/uploads-temp
+mv -Tf /srv/www/html/releases/20150517235033/wp-content/uploads-temp /srv/www/html/releases/20150517235033/wp-content/uploads
+
+$ ln -s /srv/www/html/shared/wp-config.php /srv/www/html/releases/20150517235033/wp-config.php-temp
+$ mv -Tf /srv/www/html/releases/20150517235033/wp-config.php-temp /srv/www/html/releases/20150517235033/wp-config.php
+ln -s /srv/www/html/shared/wp-config.php /srv/www/html/releases/20150517235033/wp-config.php-temp
+mv -Tf /srv/www/html/releases/20150517235033/wp-config.php-temp /srv/www/html/releases/20150517235033/wp-config.php
+
+$ ln -s /srv/www/html/releases/20150517235033 /srv/www/html/current-temp
+$ mv -Tf /srv/www/html/current-temp /srv/www/html/current
+ln -s /srv/www/html/releases/20150517235033 /srv/www/html/current-temp
+mv -Tf /srv/www/html/current-temp /srv/www/html/current
+
+$ cd /srv/www/html/releases/20150517235033
+$ composer install
+cd /srv/www/html/releases/20150517235033
+composer install
+Loading composer repositories with package information
+Installing dependencies (including require-dev)
+  - Installing composer/installers (v1.0.21)
+    Loading from cache
+
+  - Installing wpackagist-plugin/w3-total-cache (0.9.4.1)
+    Loading from cache
+
+Writing lock file
+Generating autoload files
+$ cd /srv/www/html/releases/20150517235033
+$ sudo /etc/init.d/php5-fpm restart
+cd /srv/www/html/releases/20150517235033
+sudo /etc/init.d/php5-fpm restart
+Restarting php5-fpm (via systemctl): php5-fpm.service.
+$ rm -rf /srv/www/html/releases/20150517101521 /srv/www/html/releases/20150517100506
+rm -rf /srv/www/html/releases/20150517101521 /srv/www/html/releases/20150517100506
+
+|=> Removing <info>2 releases</info> from the server

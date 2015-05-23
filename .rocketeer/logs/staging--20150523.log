@@ -1,0 +1,111 @@
+ls: cannot access /srv/www/html/releases: No such file or directory
+/usr/local/bin/composer
+$ git --version
+git --version
+git version 2.1.4
+git version 2.1.4
+/usr/bin/php
+/usr/bin/php
+$ /usr/bin/php -m
+/usr/bin/php -m
+[PHP Modules]
+bcmath
+bz2
+calendar
+Core
+ctype
+date
+dba
+dom
+ereg
+exif
+fileinfo
+filter
+ftp
+gettext
+hash
+iconv
+json
+libxml
+mbstring
+mcrypt
+mhash
+mysql
+mysqli
+openssl
+pcntl
+pcre
+PDO
+pdo_mysql
+Phar
+posix
+readline
+Reflection
+session
+shmop
+SimpleXML
+soap
+sockets
+SPL
+standard
+sysvmsg
+sysvsem
+sysvshm
+tokenizer
+wddx
+xml
+xmlreader
+xmlwriter
+Zend OPcache
+zip
+zlib
+[Zend Modules]
+Zend OPcache
+$ git clone "https://deployer@github.com/WordPress/WordPress.git" "/srv/www/html/releases/20150523235505" --branch="master" --depth="1"
+git clone "https://deployer@github.com/WordPress/WordPress.git" "/srv/www/html/releases/20150523235505" --branch="master" --depth="1"
+Cloning into '/srv/www/html/releases/20150523235505'...
+$ cd /srv/www/html/releases/20150523235505
+$ git submodule update --init --recursive
+cd /srv/www/html/releases/20150523235505
+git submodule update --init --recursive
+
+$ ln -s /srv/www/html/shared/composer.json /srv/www/html/releases/20150523235505/composer.json-temp
+$ mv -Tf /srv/www/html/releases/20150523235505/composer.json-temp /srv/www/html/releases/20150523235505/composer.json
+ln -s /srv/www/html/shared/composer.json /srv/www/html/releases/20150523235505/composer.json-temp
+mv -Tf /srv/www/html/releases/20150523235505/composer.json-temp /srv/www/html/releases/20150523235505/composer.json
+
+$ ln -s /srv/www/html/shared/wp-content/uploads /srv/www/html/releases/20150523235505/wp-content/uploads-temp
+$ mv -Tf /srv/www/html/releases/20150523235505/wp-content/uploads-temp /srv/www/html/releases/20150523235505/wp-content/uploads
+ln -s /srv/www/html/shared/wp-content/uploads /srv/www/html/releases/20150523235505/wp-content/uploads-temp
+mv -Tf /srv/www/html/releases/20150523235505/wp-content/uploads-temp /srv/www/html/releases/20150523235505/wp-content/uploads
+
+$ ln -s /srv/www/html/shared/wp-config.php /srv/www/html/releases/20150523235505/wp-config.php-temp
+$ mv -Tf /srv/www/html/releases/20150523235505/wp-config.php-temp /srv/www/html/releases/20150523235505/wp-config.php
+ln -s /srv/www/html/shared/wp-config.php /srv/www/html/releases/20150523235505/wp-config.php-temp
+mv -Tf /srv/www/html/releases/20150523235505/wp-config.php-temp /srv/www/html/releases/20150523235505/wp-config.php
+
+$ ln -s /srv/www/html/releases/20150523235505 /srv/www/html/current-temp
+$ mv -Tf /srv/www/html/current-temp /srv/www/html/current
+ln -s /srv/www/html/releases/20150523235505 /srv/www/html/current-temp
+mv -Tf /srv/www/html/current-temp /srv/www/html/current
+
+$ cd /srv/www/html/releases/20150523235505
+$ composer install
+cd /srv/www/html/releases/20150523235505
+composer install
+Loading composer repositories with package information
+Installing dependencies (including require-dev)
+  - Installing composer/installers (v1.0.21)
+    Loading from cache
+
+  - Installing wpackagist-plugin/w3-total-cache (0.9.4.1)
+    Loading from cache
+
+Writing lock file
+Generating autoload files
+$ cd /srv/www/html/releases/20150523235505
+$ sudo /etc/init.d/php5-fpm restart
+cd /srv/www/html/releases/20150523235505
+sudo /etc/init.d/php5-fpm restart
+Restarting php5-fpm (via systemctl): php5-fpm.service.
+|=> No releases to prune from the server

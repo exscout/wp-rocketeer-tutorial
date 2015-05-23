@@ -1,0 +1,49 @@
+20150513011235
+20150513195924
+20150514025229
+20150514031351
+20150514033310
+$ git clone "https://github.com/WordPress/WordPress.git" "/srv/www/html/releases/20150514231915" --branch="master" --depth="1"
+git clone "https://github.com/WordPress/WordPress.git" "/srv/www/html/releases/20150514231915" --branch="master" --depth="1"
+Cloning into '/srv/www/html/releases/20150514231915'...
+$ cd /srv/www/html/releases/20150514231915
+$ git submodule update --init --recursive
+cd /srv/www/html/releases/20150514231915
+git submodule update --init --recursive
+
+$ cd /srv/www/html/releases/20150514231915
+$ chmod -R 755 /srv/www/html/releases/20150514231915/app/database/production.sqlite
+$ chmod -R g+s /srv/www/html/releases/20150514231915/app/database/production.sqlite
+$ chown -R www-data:www-data /srv/www/html/releases/20150514231915/app/database/production.sqlite
+cd /srv/www/html/releases/20150514231915
+chmod -R 755 /srv/www/html/releases/20150514231915/app/database/production.sqlite
+chmod -R g+s /srv/www/html/releases/20150514231915/app/database/production.sqlite
+chown -R www-data:www-data /srv/www/html/releases/20150514231915/app/database/production.sqlite
+chmod: cannot access ‘/srv/www/html/releases/20150514231915/app/database/production.sqlite’: No such file or directory
+$ cd /srv/www/html/releases/20150514231915
+$ chmod -R 755 /srv/www/html/releases/20150514231915/storage
+$ chmod -R g+s /srv/www/html/releases/20150514231915/storage
+$ chown -R www-data:www-data /srv/www/html/releases/20150514231915/storage
+cd /srv/www/html/releases/20150514231915
+chmod -R 755 /srv/www/html/releases/20150514231915/storage
+chmod -R g+s /srv/www/html/releases/20150514231915/storage
+chown -R www-data:www-data /srv/www/html/releases/20150514231915/storage
+chmod: cannot access ‘/srv/www/html/releases/20150514231915/storage’: No such file or directory
+$ cd /srv/www/html/releases/20150514231915
+$ chmod -R 755 /srv/www/html/releases/20150514231915/public
+$ chmod -R g+s /srv/www/html/releases/20150514231915/public
+$ chown -R www-data:www-data /srv/www/html/releases/20150514231915/public
+cd /srv/www/html/releases/20150514231915
+chmod -R 755 /srv/www/html/releases/20150514231915/public
+chmod -R g+s /srv/www/html/releases/20150514231915/public
+chown -R www-data:www-data /srv/www/html/releases/20150514231915/public
+chmod: cannot access ‘/srv/www/html/releases/20150514231915/public’: No such file or directory
+$ ln -s /srv/www/html/releases/20150514231915 /srv/www/html/current-temp
+$ mv -Tf /srv/www/html/current-temp /srv/www/html/current
+ln -s /srv/www/html/releases/20150514231915 /srv/www/html/current-temp
+mv -Tf /srv/www/html/current-temp /srv/www/html/current
+
+$ rm -rf /srv/www/html/releases/20150513011235
+rm -rf /srv/www/html/releases/20150513011235
+
+|=> Removing <info>1 release</info> from the server

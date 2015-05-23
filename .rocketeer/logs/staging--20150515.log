@@ -1,0 +1,57 @@
+20150514025229
+20150514031351
+20150514033310
+20150514231915
+20150515234700
+$ git clone "https://github.com/WordPress/WordPress.git" "/srv/www/html/releases/20150515235953" --branch="master" --depth="1"
+git clone "https://github.com/WordPress/WordPress.git" "/srv/www/html/releases/20150515235953" --branch="master" --depth="1"
+Cloning into '/srv/www/html/releases/20150515235953'...
+$ cd /srv/www/html/releases/20150515235953
+$ git submodule update --init --recursive
+cd /srv/www/html/releases/20150515235953
+git submodule update --init --recursive
+
+$ cd /srv/www/html/releases/20150515235953
+$ chmod -R 755 /srv/www/html/releases/20150515235953/app/database/production.sqlite
+$ chmod -R g+s /srv/www/html/releases/20150515235953/app/database/production.sqlite
+$ chown -R www-data:www-data /srv/www/html/releases/20150515235953/app/database/production.sqlite
+cd /srv/www/html/releases/20150515235953
+chmod -R 755 /srv/www/html/releases/20150515235953/app/database/production.sqlite
+chmod -R g+s /srv/www/html/releases/20150515235953/app/database/production.sqlite
+chown -R www-data:www-data /srv/www/html/releases/20150515235953/app/database/production.sqlite
+chmod: cannot access ‘/srv/www/html/releases/20150515235953/app/database/production.sqlite’: No such file or directory
+$ cd /srv/www/html/releases/20150515235953
+$ chmod -R 755 /srv/www/html/releases/20150515235953/storage
+$ chmod -R g+s /srv/www/html/releases/20150515235953/storage
+$ chown -R www-data:www-data /srv/www/html/releases/20150515235953/storage
+cd /srv/www/html/releases/20150515235953
+chmod -R 755 /srv/www/html/releases/20150515235953/storage
+chmod -R g+s /srv/www/html/releases/20150515235953/storage
+chown -R www-data:www-data /srv/www/html/releases/20150515235953/storage
+chmod: cannot access ‘/srv/www/html/releases/20150515235953/storage’: No such file or directory
+$ cd /srv/www/html/releases/20150515235953
+$ chmod -R 755 /srv/www/html/releases/20150515235953/public
+$ chmod -R g+s /srv/www/html/releases/20150515235953/public
+$ chown -R www-data:www-data /srv/www/html/releases/20150515235953/public
+cd /srv/www/html/releases/20150515235953
+chmod -R 755 /srv/www/html/releases/20150515235953/public
+chmod -R g+s /srv/www/html/releases/20150515235953/public
+chown -R www-data:www-data /srv/www/html/releases/20150515235953/public
+chmod: cannot access ‘/srv/www/html/releases/20150515235953/public’: No such file or directory
+$ rm -rf /srv/www/html/releases/20150515235953/wp-content/plugins
+rm -rf /srv/www/html/releases/20150515235953/wp-content/plugins
+
+$ ln -s /srv/www/html/shared/wp-content/plugins /srv/www/html/releases/20150515235953/wp-content/plugins-temp
+$ mv -Tf /srv/www/html/releases/20150515235953/wp-content/plugins-temp /srv/www/html/releases/20150515235953/wp-content/plugins
+ln -s /srv/www/html/shared/wp-content/plugins /srv/www/html/releases/20150515235953/wp-content/plugins-temp
+mv -Tf /srv/www/html/releases/20150515235953/wp-content/plugins-temp /srv/www/html/releases/20150515235953/wp-content/plugins
+
+$ ln -s /srv/www/html/releases/20150515235953 /srv/www/html/current-temp
+$ mv -Tf /srv/www/html/current-temp /srv/www/html/current
+ln -s /srv/www/html/releases/20150515235953 /srv/www/html/current-temp
+mv -Tf /srv/www/html/current-temp /srv/www/html/current
+
+$ rm -rf /srv/www/html/releases/20150514025229
+rm -rf /srv/www/html/releases/20150514025229
+
+|=> Removing <info>1 release</info> from the server
